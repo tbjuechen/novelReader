@@ -1,0 +1,94 @@
+:root {
+  --bg-color:rgb(238,238,238);
+  --bg-color-c: #fff;
+  --sd-color: #D0D0D0;
+  --l-color: #CCCCCC;
+}
+:root .dark {
+  --bg-color:rgb(24,24,24);
+  --bg-color-c: #101010;
+  --sd-color: #303030;
+  --l-color: #333333;
+}
+
+@media (prefers-color-scheme: dark) {}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  /* transition: color 0.5s, background-color 0.5s; */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  position: relative;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.container {
+  width: 100%;
+  background-color: var(--bg-color-c); ;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 3px var(--sd-color);
+  position: relative;
+}
+
+.text{
+  text-indent: 2em;
+}
+
+.mobile {
+  display: none;
+}
+
+.container-header {
+  font-size: 24px;
+  font-weight: bold;
+  /* margin-bottom: 20px; */
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.container-divder {
+  width: 90%;
+  height: 1px;
+  background-color: var(--l-color);
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    border-radius: 0px;
+  }
+
+  .desktop {
+    display: none;
+  }
+  
+  .mobile {
+    display: block;
+  }
+  
+}
